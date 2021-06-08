@@ -4,12 +4,7 @@ version: 2.1
 workflows:
   build_test:
     jobs:
-      - node/test:
-          matrix:
-            parameters:
-              version:
-                - 14.17.0
-      - build_docker_image:
+      - build:
           requires:
             - node/test
 
