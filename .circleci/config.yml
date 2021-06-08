@@ -4,12 +4,10 @@ version: 2.1
 workflows:
   build_test:
     jobs:
-      - build:
-          requires:
-            - node/test
+      - build
 
 jobs:
-  build_docker_image:
+  build:
     docker:
       - image: cimg/node:14.17.0
     steps:
