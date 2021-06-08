@@ -2,16 +2,9 @@
 version: 2.1
 # Use a package of configuration called an orb.
 workflows:
-  build_test:
+  build:
     jobs:
-      - node/test:
-          matrix:
-            parameters:
-              version:
-                - v14.17.0
-      - build_docker_image:
-          requires:
-            - node/test
+      - build_docker_image
 
 jobs:
   build_docker_image:
