@@ -8,9 +8,7 @@ workflows:
           matrix:
             parameters:
               version:
-                - 14.0.0
-                - 13.11.0
-                - 12.16.0
+                - 12.18.3
       # - build_docker_image:
       #     requires:
       #       - node/test
