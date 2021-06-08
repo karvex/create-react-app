@@ -1,4 +1,4 @@
-FROM node:12.18.3
+FROM node:14.17.0
 
 LABEL author="Chi Hao Poon"
 
@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN nvm install && nvm use
+RUN npm install
 
 COPY . ./
 
