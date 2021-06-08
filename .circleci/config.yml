@@ -9,7 +9,7 @@ workflows:
 jobs:
   build_docker_image:
     docker:
-      - image: cimg/node:v14.17.0
+      - image: cimg/node:14.17.0
     steps:
       - checkout
       - setup_remote_docker
