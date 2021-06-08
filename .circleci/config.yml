@@ -22,14 +22,14 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker:
-        docker_layer_caching: true
+          docker_layer_caching: true
       - run:
-        name: Set up tag
-        command: echo "export TAG=0.1.$CIRCLE_SHA1" >> $BASH_ENV
+          name: Set up tag
+          command: echo "export TAG=0.1.$CIRCLE_SHA1" >> $BASH_ENV
       - run: 
-        name: Build Docker image
-        command: |
-          docker build -t ci-image:latest .
+          name: Build Docker image
+          command: |
+            docker build -t ci-image:latest .
 
 orbs:
   node: circleci/node@4.0.0
